@@ -1,0 +1,155 @@
+#registrationForm {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+}
+
+#registrationForm .form-control {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #ffffff;
+    padding: 12px 20px;
+    font-family: 'Chakra Petch', sans-serif; /* Match your website font */
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+#registrationForm .form-control:focus {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #5142FC;
+    box-shadow: none;
+    outline: none;
+}
+
+#registrationForm label {
+    color: #ffffff;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+#registrationForm select.form-control {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+}
+
+.member-block {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.member-block h5 {
+    color: #ffffff;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+#registrationForm .tf-button {
+    background: linear-gradient(to right, #5142FC, #AF42FC);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#registrationForm .tf-button:hover {
+    background: linear-gradient(to right, #AF42FC, #5142FC);
+    transform: translateY(-2px);
+}
+
+#registrationForm ::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#registrationForm select option {
+    background: #1F1F2C;
+    color: white;
+    padding: 12px;
+}
+/* Update Loading Overlay styles */
+.loading-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loader {
+    border: 5px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 5px solid #3498db;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    transition: all 0.3s ease-out;
+}
+
+.success-message {
+    display: none;
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    padding: 30px;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    max-width: 400px;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.3s ease-out;
+}
+
+.success-message.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.success-icon {
+    color: #4CAF50;
+    font-size: 48px;
+    margin-bottom: 15px;
+    transform: scale(0);
+    animation: scaleIn 0.5s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes scaleIn {
+    0% { transform: scale(0); }
+    70% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Add some style to the message text */
+.success-message p {
+    margin: 8px 0;
+    line-height: 1.5;
+    font-size: 16px;
+}
