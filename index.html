@@ -40,6 +40,29 @@
         .swiper-container.slider-main {
         height: 100vh;
        }
+       .slider-st3 .overlay {
+        position: relative;
+    }
+
+    .slider-st3 .overlay video {
+        opacity: 0.7; 
+    }
+
+    .slider-st3 .overlay::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7); 
+        z-index: 1;
+    }
+
+    .slider-st3 .container {
+        position: relative;
+        z-index: 2;
+    }
         .featured-countdown span.js-countdown span {
             width: 150px;
             height: 150px;
@@ -97,8 +120,6 @@
         color: #ffffff !important; /* Force white color */
         opacity: 1 !important; /* Remove transparency */
     }
-
-    /* In case the above color setting doesn't work, add this stronger selector */
     .featured-countdown .desc li, 
     .featured-countdown .desc li span {
         color: #ffffff !important;
